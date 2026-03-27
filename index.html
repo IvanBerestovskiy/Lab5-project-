@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java Script</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="container">
+    <div class="header-row">
+        <h1>Лабораторна робота №4 (Портфоліо)</h1>
+        <button id="themeToggleBtn" class="theme-btn" type="button">
+        Перемкнути на нічну
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="resume-card">
+        <aside class="sidebar">
+            <div class="profile">
+                <img src="resume_photo.jpg" alt="Фото Івана Берестовського" class="foto">
+                <h1>Іван<br>Берестовський</h1>
+            </div>
+            
+            <section>
+                <h3>Контакти</h3>
+                <p><a href="tel:+380664570426">+380 66 457 0426</a></p>
+                <p><a href="mailto:ivanberestovskij5@gmail.com">ivanberestovskij5@gmail.com</a></p>
+            </section>
+
+            <section>
+                <h3>Навички</h3>
+                <ul>
+                    <li>Комунікабельність</li>
+                    <li>Відповідальність</li>
+                    <li>Критичне мислення</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Мови</h3>
+                <p>Українська — Рідна</p>
+                <p>Англійська — B1</p>
+            </section>
+        </aside>
+
+        <main class="content">
+            <section>
+                <h2>Про мене</h2>
+                <p>Студент другого курсу НУ "Львівська Політехніка". Спеціалізуюся на кібербезпеці. Відповідально ставлюся до виконання завдань та прагну до професійного розвитку.</p>
+            </section>
+
+            <section>
+                <h2>Освіта</h2>
+                <div class="job">
+                    <div class="job-header">
+                        <strong>Львівська Політехніка</strong>
+                        <span>2024 — Тепер</span>
+                    </div>
+                    <p>Бакалавр, Кібербезпека та захист інформації</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Курси</h2>
+                <div class="job">
+                    <div class="job-header">
+                        <strong>IT Univer</strong>
+                        <span>2021 — 2023</span>
+                    </div>
+                    <p>Завершений курс веб-розробника з сертифікатом</p>
+                </div>
+                <div class="job">
+                    <div class="job-header">
+                        <strong>IT Future Fest</strong>
+                        <span>2025</span>
+                    </div>
+                    <p>Відвідування заходу у Львові з сертифікатом</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Досвід роботи</h2>
+                <div class="job">
+                    <div class="job-header">
+                        <strong>Нова Пошта</strong>
+                        <span>2025 — Тепер</span>
+                    </div>
+                    <p>Приймальник-відправник</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <section class="card">
+      <h2>Коментарі попередніх роботодавців (з сервера)</h2>
+      <p id="commentsStatus">Завантаження...</p>
+      <div id="commentsList"></div>
+    </section>
+  </main>
+
+  <footer class="container card">
+    <h3>Дані про систему з localStorage</h3>
+    <div id="storageOutput"></div>
+  </footer>
+
+  <div id="feedbackModal" class="modal hidden">
+    <div class="modal-content">
+      <button id="closeModalBtn" class="close-btn" aria-label="Закрити">×</button>
+      <h2>Форма зворотного зв'язку</h2>
+
+      <form id="feedbackForm" action="https://formspree.io/f/xojkkrla" method="POST">
+        <div class="form-group">
+          <label for="name">Ім’я</label>
+          <input id="name" type="text" name="name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input id="email" type="email" name="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Номер телефону</label>
+          <input id="phone" type="tel" name="phone" required />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Повідомлення</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="captcha">Захист від роботів: (Введіть "Lviv")</label>
+          <input id="captcha" type="text" name="_captcha_text" required />
+        </div>
+
+        <button type="submit" class="submit-btn">Відправити</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
